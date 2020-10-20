@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Supplier, type: :model do
+RSpec.describe Review, type: :model do
   let(:supplier) { Supplier.create(name: 'Supplier Name') }
   let(:subject) { described_class.new(title: 'Review title', body: 'Review Body', rating: 2, supplier_id: supplier.id) }
 
