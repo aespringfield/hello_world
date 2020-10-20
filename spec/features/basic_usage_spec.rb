@@ -57,6 +57,20 @@ RSpec.feature 'Basic Usage', type: :feature do
       expect(page).to have_content('222-333-9876')
     end
 
+    click_link_or_button('Write a Review')
+
+    fill_in 'review[title]', with: "An interesting experience"
+    fill_in 'review[body]', with: 'My team was all right. They had some odd comments about the Syracuse branch, though...'
+    select '4', from: 'review[overall_rating]'
+
+    click_link_or_button('Publish')
+
+    aggregate_failures do
+      expect(page).to have_content('An interesting experience')
+      expect(page).to have_content('My team was all right. They had some odd comments about the Syracuse branch, though...')
+      expect(page).to have_content('Overall Rating: 4')
+    end
+
     click_link_or_button('Back to Suppliers')
 
     aggregate_failures do
