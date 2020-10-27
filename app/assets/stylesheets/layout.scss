@@ -1,0 +1,47 @@
+@import 'normalize.css/normalize.css';
+@import 'colors';
+
+body {
+  width: 100%;
+  font-family: opensans,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  overflow-y: scroll;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+h1 {
+  color: $almost-black;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+h2 {
+  color: $dark-gray;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.header-bar {
+  background: $very-light-gray;
+  margin: 0;
+  width: 100%;
+}
+
+.main-heading {
+  text-align: left;
+  postition: absolute;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  margin: 0;
+  box-sizing: border-box;
+}

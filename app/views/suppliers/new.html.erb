@@ -1,0 +1,30 @@
+<% provide(:page_heading, "Create a Supplier") %>
+<div class="form-container">
+  <%= form_with(model: @supplier, local: true) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+
+    <%= f.label :ein, 'EIN' %>
+    <%= f.text_field :ein %>
+
+    <%= f.label :address_1, 'Address line 1' %>
+    <%= f.text_field :address_1 %>
+
+    <%= f.label :address_2, 'Address line 2' %>
+    <%= f.text_field :address_2 %>
+
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+
+    <div class="button-set">
+      <%= f.submit "Create", class: "button outline medium" %>
+      <%= link_to "Cancel", suppliers_path, class: "button cancel medium" %>
+    </div>
+  <% end %>
+</div>

@@ -61,7 +61,7 @@ RSpec.feature 'Basic Usage', type: :feature do
 
     fill_in 'review[title]', with: "An interesting experience"
     fill_in 'review[body]', with: 'My team was all right. They had some odd comments about the Syracuse branch, though...'
-    select '4', from: 'review[overall_rating]'
+    select '4', from: 'review[rating]'
 
     click_link_or_button('Publish')
 

@@ -1,0 +1,8 @@
+<%= link_to supplier_path(supplier), class: "card hoverable" do %>
+  <div>
+    <h3 class="card-item-heading"><%= supplier.name %></h3>
+    <blockquote class="card-item-value">
+      <%= highlighted_review_excerpt(supplier) || raw('<span class="placeholder">No reviews yet<span>') %>
+    </blockquote>
+  </div>
+<% end %>

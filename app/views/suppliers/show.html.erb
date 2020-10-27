@@ -1,0 +1,40 @@
+<% provide(:page_heading, @supplier.name) %>
+
+<div class="show-container">
+  <div class="card unicard">
+    <div class="card-item">
+      <h3 class="card-item-heading">EIN</h3>
+      <p class="card-item-value"><%= @supplier.ein %></p>
+    </div>
+
+    <div class="card-item">
+      <h3 class="card-item-heading">Address line 1</h3>
+      <p class="card-item-value"><%= @supplier.address_1 %></p>
+    </div>
+
+    <div class="card-item">
+      <h3 class="card-item-heading">Address line 2</h3>
+      <p class="card-item-value"><%= @supplier.address_2 %></p>
+    </div>
+
+    <div class="card-item">
+      <h3 class="card-item-heading">City</h3>
+      <p class="card-item-value"><%= @supplier.city %></p>
+    </div>
+
+    <div class="card-item">
+      <h3 class="card-item-heading">State</h3>
+      <p class="card-item-value"><%= @supplier.state %></p>
+    </div>
+
+    <div class="card-item">
+      <h3 class="card-item-heading">Phone number</h3>
+      <p class="card-item-value"><%= @supplier.phone_number %></p>
+    </div>
+  </div>
+
+  <div class="button-set">
+    <%= link_to "Write a Review", new_supplier_review_path(@supplier), class: "button outline medium" %>
+    <%= link_to "Back to Suppliers", suppliers_path, class: "button cancel medium" %>
+  </div>
+</div>

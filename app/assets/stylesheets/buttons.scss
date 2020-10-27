@@ -1,0 +1,75 @@
+@import 'colors';
+
+.button {
+  transition-property: background-color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  font-family: opensanssemibold,Helvetica,Arial,sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 2px solid #fff;
+  color: $orange;
+  box-sizing: border-box;
+
+  &:hover {
+    background: $orange;
+    color: #fff;
+  }
+
+  &.outline {
+    border: 2px solid $orange;
+  }
+
+  &.cancel {
+    color: $light-gray;
+
+    &:hover {
+      border: 2px solid $light-gray;
+      background: $light-gray;
+      color: #fff;
+    }
+  }
+
+  &.large {
+    font-size: 1.25em;
+    line-height: 30px;
+    min-width: 20px;
+    padding: 1em;
+  }
+
+  &.medium {
+    font-size: 1em;
+    line-height: 30px;
+    min-width: 20px;
+    padding: .8em;
+  }
+
+  &.wide {
+    width: 100%;
+  }
+}
+
+.button-back {
+  text-align: right;
+  padding-top: 20px;
+}
+
+.button-set {
+  position: relative;
+  padding-top: 20px;
+  display: flex;
+
+  .button {
+    width: 50%;
+    margin-right: 15px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

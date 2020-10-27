@@ -1,0 +1,23 @@
+<% provide(:page_heading, @review.supplier.name) %>
+
+<h2><%= @review.title %></h2>
+
+<div class="show-container">
+  <div class="card unicard">
+    <div class="card-item">
+      <p class="review-body">
+        <%= @review.body %>
+      </p>
+    </div>
+
+    <div class="card-item">
+      <p class="card-item-value">
+        Overall Rating: <%= @review.rating %>
+      </p>
+    </div>
+  </div>
+
+  <div class="button-back">
+    <%= link_to "Back to Suppliers", suppliers_path, class: "button medium outline" %>
+  </div>
+</div>

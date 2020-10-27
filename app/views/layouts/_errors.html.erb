@@ -1,0 +1,7 @@
+<% if !flash.empty? %>
+  <ul class="error-list">
+    <% flash[:errors].each do |message| %>
+      <%= content_tag :li, message, class: ["error", "card"] %>
+    <% end %>
+  </ul>
+<% end %>

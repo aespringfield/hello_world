@@ -1,0 +1,11 @@
+<% provide(:page_heading, "Suppliers") %>
+<div class="index-container">
+  <ul>
+    <% @suppliers.each do |supplier| %>
+      <li>
+        <%= render partial: "suppliers/card", locals: {supplier: supplier } %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Add Supplier", new_supplier_path, class: "button medium wide" %>
+</div>

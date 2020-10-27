@@ -1,0 +1,18 @@
+<% provide(:page_heading, "Write a Review") %>
+<div class="form-container">
+  <%= form_with(model: @review, url: [@supplier, @review], local: true) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true %>
+
+    <%= f.label :body %>
+    <%= f.text_area :body, rows: 10, required: true %>
+
+    <%= f.label :rating, "Overall rating" %>
+    <%= f.select :rating, options_for_select((1..5)), required: true %>
+
+    <div class="button-set">
+      <%= f.submit "Publish", class: "button medium outline wide" %>
+      <%= link_to "Cancel", :back, class: "button cancel medium wide" %>
+    </div>
+  <% end %>
+</div>
